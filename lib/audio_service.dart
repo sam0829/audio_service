@@ -1904,6 +1904,7 @@ abstract class BackgroundAudioTask {
   }
 }
 
+@pragma('vm:entry-point')
 _iosIsolateEntrypoint(int rawHandle) async {
   ui.CallbackHandle handle = ui.CallbackHandle.fromRawHandle(rawHandle);
   Function backgroundTask = ui.PluginUtilities.getCallbackFromHandle(handle)!;
